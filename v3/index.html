@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>版本三 - ASDF 打字練習</title>
+  <style>
+    body {
+      font-family: system-ui, "Microsoft JhengHei", sans-serif;
+      background-color: #f8f9fa;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: white;
+      padding: 32px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+    .target-char {
+      font-size: 5rem;
+      font-weight: bold;
+      color: #0d6efd;
+      margin: 20px 0;
+    }
+    .info { font-size: 1.2rem; color: #495057; }
+    .nav-link { display: inline-block; margin-top: 20px; color: #6c757d; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>版本三：ASDF 練習</h2>
+    <p>請按下鍵盤上的對應字母：</p>
+    <div class="target-char" id="target">A</div>
+    <div class="info">得分：<span id="score">0</span></div>
+    <a href="../index.html" class="nav-link">← 返回歷程首頁</a>
+  </div>
+
+  <script>
+    const keys = ['A', 'S', 'D', 'F', 'J', 'K', 'L'];
+    let currentKey = 'A';
+    let score = 0;
+
+    function nextKey() {
+      currentKey = keys[Math.floor(Math.random() * keys.length)];
+      document.getElementById('target').innerText = currentKey;
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key.toUpperCase() === currentKey) {
+        score += 10;
+        document.getElementById('score').innerText = score;
+        nextKey();
+      }
+    });
+  </script>
+</body>
+</html>
