@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>英打遊戲開發歷程</title>
+  <style>
+    body {
+      font-family: system-ui, "Microsoft JhengHei", sans-serif;
+      background-color: #f8f9fa;
+      color: #212529;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .container {
+      background: #ffffff;
+      border: 1px solid #dee2e6;
+      border-radius: 12px;
+      padding: 32px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      text-align: center;
+      max-width: 480px;
+      width: 100%;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+    p {
+      color: #6c757d;
+      margin-bottom: 24px;
+    }
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .btn {
+      display: block;
+      padding: 12px 24px;
+      background-color: #0d6efd;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: background-color 0.2s;
+    }
+    .btn:hover {
+      background-color: #0b5ed7;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>英打遊戲開發歷程</h1>
+    <p>請選擇欲測試的遊戲版本：</p>
+    <div class="btn-group">
+      <!-- 請將 u11517023-source 改成你的 GitHub 帳號 -->
+      <a class="btn" href="https://u11517023-source.github.io/typing-v1/" target="_blank">版本一：基本介面</a>
+      <a class="btn" href="https://u11517023-source.github.io/typing-v2/" target="_blank">版本二：加入多媒體元件</a>
+    </div>
+  </div>
+</body>
+</html>
