@@ -7,63 +7,85 @@
   <style>
     body {
       font-family: system-ui, "Microsoft JhengHei", sans-serif;
-      background-color: #f8f9fa;
+      background-color: #f4f6f8;
       color: #212529;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       min-height: 100vh;
       margin: 0;
-      padding: 20px;
+      padding: 40px 20px;
       box-sizing: border-box;
     }
-    .container {
-      background: #ffffff;
-      border: 1px solid #dee2e6;
-      border-radius: 12px;
-      padding: 32px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      text-align: center;
-      max-width: 480px;
+    h1 { margin-bottom: 8px; }
+    .subtitle { color: #6c757d; margin-bottom: 32px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      max-width: 900px;
       width: 100%;
     }
-    h1 {
-      font-size: 1.8rem;
-      margin-bottom: 8px;
-    }
-    p {
-      color: #6c757d;
-      margin-bottom: 24px;
-    }
-    .btn-group {
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      border: 1px solid #e9ecef;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.03);
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      justify-content: space-between;
     }
+    .card h3 { margin-top: 0; }
     .btn {
       display: block;
-      padding: 12px 24px;
+      text-align: center;
+      padding: 10px;
       background-color: #0d6efd;
       color: white;
       text-decoration: none;
       border-radius: 6px;
       font-weight: 500;
-      transition: background-color 0.2s;
+      margin-top: 16px;
     }
-    .btn:hover {
-      background-color: #0b5ed7;
-    }
+    .btn:hover { background-color: #0b5ed7; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>英打遊戲開發歷程</h1>
-    <p>請選擇欲測試的遊戲版本：</p>
-    <div class="btn-group">
-      <!-- 請將 u11517023-source 改成你的 GitHub 帳號 -->
-      <a class="btn" href="https://u11517023-source.github.io/typing-v1/" target="_blank">版本一：基本介面</a>
-      <a class="btn" href="https://u11517023-source.github.io/typing-v2/" target="_blank">版本二：加入多媒體元件</a>
+  <h1>英打遊戲開發歷程</h1>
+  <p class="subtitle">記錄從基礎介面到完整遊戲的開發過程</p>
+
+  <div class="grid">
+    <div class="card">
+      <div>
+        <h3>版本一</h3>
+        <p>基本 HTML/CSS 介面搭建。</p>
+      </div>
+      <a class="btn" href="https://u11517023-source.github.io/typing-v1/" target="_blank">前往版本一</a>
+    </div>
+
+    <div class="card">
+      <div>
+        <h3>版本二</h3>
+        <p>加入圖片與音效互動體驗。</p>
+      </div>
+      <a class="btn" href="https://u11517023-source.github.io/typing-v2/" target="_blank">前往版本二</a>
+    </div>
+
+    <div class="card">
+      <div>
+        <h3>版本三</h3>
+        <p>ASDF 主導鍵練習遊戲。</p>
+      </div>
+      <a class="btn" href="./v3/index.html">前往版本三</a>
+    </div>
+
+    <div class="card">
+      <div>
+        <h3>版本四</h3>
+        <p>十鍵掉落字母遊戲。</p>
+      </div>
+      <a class="btn" href="./v4/index.html">前往版本四</a>
     </div>
   </div>
 </body>
